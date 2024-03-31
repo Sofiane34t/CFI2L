@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <head>
+        <!-- En-tête de la page -->
+        <meta charset="UTF-8">
+         <!-- Métadonnées pour le référencement SEO et les réseaux sociaux -->
+        <meta name="autor" content="Ali Sofiane TALBI"/>
+        <meta name="description" content="Site de reservation de voyage"/>
+        <meta name="keywords" content="Travel, Voyage, reservation, reservation, destination"/> 
+
+        <!-- Ajustement de la vue pour les appareils mobiles -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Travel</title>
+        <!-- Liens vers toutes les feuilles de style -->
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css">  <!-- Feuille de style Bootstrap -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">  <!-- Préconnexion aux services Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <!-- Préconnexion aux services Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- Feuille de style pour la police Open Sans -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> <!-- Feuille de style pour les icônes FontAwesome -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">  <!-- Feuille de style pour l'interface utilisateur jQuery UI -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"> <!-- Feuille de style pour le carrousel Slick -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"> <!-- Feuille de style pour le carrousel Slick -->
+        <link rel="stylesheet" href="./assets/css/style.css" type="text/css">  <!-- feuille de style personnalisée / il faut toujours la mettre en dernier -->
+    </head>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/img/logo.png" alt="Logo du Site"><span class="logo-text">Travel</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="level-nav-link nav-link active" aria-current="page" href="#">Accueil</a>
+            <a class="level-nav-link nav-link" href="#slide">Slides</a>
+            <a class="level-nav-link nav-link" href="#video">Vidéo</a>
+            <a class="level-nav-link nav-link" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Menu de recherche-->
+    <div class="hero">
+      <div class="container">
+        <form action="index.html" method="get" class="search-form">
+          <div class="form-group" style="flex: 100%;">
+            <i class="fa fa-map-marker"></i>
+              <input type="text" name="city" class="form-control" placeholder="Taper votre destination">
+          </div>
+          <div class="form-group">
+            <i class="fa fa-calendar"></i>
+            <input type="text" class="form-control" id="inputCkeckIn" placeholder="Date d'arrivée">
+          </div>
+          <div class="form-group">
+            <i class="fa fa-calendar"></i>
+            <input type="text" class="form-control" id="inputCkeckOut" placeholder="Date de départ">
+          </div> 
+          <div class="form-group">
+            <i class="fa fa-bed"></i>
+            <select class="form-control">
+              <option value="">Chambres</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <i class="fa fa-user"></i>
+            <select class="form-control">
+              <option value="">Adultes</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <i class="fa fa-user"></i>
+            <select class="form-control">
+              <option value="">Enfants</option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" onclick="showAlert()"> Reserver</button>
+          </div>
+        </form>
+          <p class="need-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, eos!. <a href="#"> Besoin d'aide?</a> </p>
+        </div>
+      </div>
+    <!-- s'abonner-->
+    <section class="section-color">
+      <div class="container text-center">
+        <h2 class="section-title"> Nous sommes là pour vous aider</h2>
+        <p class="section-subtitle">Abonnez-vous pour recevoir nos actualités </p>
+        <a href="#" class="btn btn-white" onclick="showAlert()">Abonnez-vous à notre Newletters</a>
+      </div>
+    </section>
+
+    <!-- Service-->   
+    <section>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="section-down-arrow">
+        <polygon points="0,0 100,0 50,100" style="fill: var(--color-primary)" />
+      </svg>
+      <div class="container">
+        <div class="row">
+          <article class="article col-lg-4">
+            <i class="fa fa-institution article-icon"></i>
+            <h3 class="article-title">Économisez plus grâce au long séjour à l'hôtel</h3>
+            <p>Certains hôtels et locations de vacances proposent désormais des tarifs réduits sur Booking.com pour les séjours au mois, ce qui vous permet d'économiser davantage lorsque vous séjournez plus longtemps.</p>
+            <a href="#" class="btn btn-primary btn-fit">continuez à lire</a>
+          </article>
+          <article class="article col-lg-4">
+            <i class="fa fa-plane article-icon"></i>
+            <h3 class="article-title">Conciliez travail et loisirs</h3>
+            <p>Choisissez un établissement qui dispose de tout ce qu'il vous faut pour profiter confortablement d'un séjour de 30 jours ou plus.</p>
+            <a href="#" class="btn btn-primary btn-fit">continuez à lire</a>
+          </article>                
+          <article class="article col-lg-4">
+            <i class="fa fa-life-saver article-icon"></i>
+            <h3 class="article-title">Plus de 1,3 million de séjours longue durée</h3>
+            <p>Faites votre choix parmi tous types d'hébergements, des hôtels aux locations au mois. Consultez les commentaires clients authentiques pour sélectionner un endroit où poser vos valises.</p>
+            <a href="#" class="btn btn-primary btn-fit">continuez à lire</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slider--> 
+    <section id="slide" class="section-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="level-slider">
+              <article class="level-slider-item">
+                <img src="./assets/img/img-01.jpg" alt="">
+                <div class="level-slider-item-container">
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam debitis, ex ab a iure rerum adipisci fuga fugiat consectetur adipisicing eum enim? </p>
+                  <a href="" class="btn btn-primary btn-fit">Plus d'info</a>
+                </div>
+              </article>
+              <article class="level-slider-item">
+                <img src="./assets/img/img-02.jpg" alt="">
+                <div class="level-slider-item-container">
+                  <h3>Lorem, ipsum. Lorem, ipsum dolor.</h3>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati tempora corporis sed minus ipsam nulla, ea dolore voluptas, consequuntur modi soluta?</p>
+                  <a href="" class="btn btn-primary btn-fit">Plus d'info</a>
+                </div>
+              </article>
+              <article class="level-slider-item">
+                <img src="./assets/img/img-03.jpg" alt="">
+                <div class="level-slider-item-container">
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quas maxime, maiores odit alias corporis officiis recusandae libero sunt! Quos, consectetur adipisicing explicabo esse.</p>
+                  <a href="" class="btn btn-primary btn-fit">Plus d'info</a>
+                </div>
+              </article>
+              <article class="level-slider-item">
+                <img src="./assets/img/img-04.jpg" alt="">
+                <div class="level-slider-item-container">
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quae omnis voluptatem non magnam, architecto incidunt quam voluptas deserunt! Dignissimos.</p>
+                  <a href="" class="btn btn-primary btn-fit">Plus d'info</a>
+                </div>
+              </article>
+              <article class="level-slider-item">
+                <img src="./assets/img/img-05.jpg" alt="">
+                <div class="level-slider-item-container">
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing consectetur adipisicing elit. Officiis velit magnam adipisci numquam perferendis id qui totam magni?</p>
+                  <a href="" class="btn btn-primary btn-fit">Plus d'info</a>
+                </div>
+              </article>
+              <article class="level-slider-item">
+                <img src="./assets/img/img-02.jpg" alt="">
+                <div class="level-slider-item-container">
+                  <h3>Lorem ipsum dolor sit amet.</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aliquid ullam sint dolore ea hic, rem maxime iure harum odio?</p>
+                  <a href="" class="btn btn-primary btn-fit">Plus d'info</a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="star-places">
+              <div class="star-places-header">
+                <h3>Endroits recommandés</h3>
+                <p>Les endroits que nous recommandons pour vous.</p>
+              </div>
+              <div class="star-places-bady">
+                <a href="#">
+                  <img src="./assets/img/tn-img-01.jpg" alt="place-image">
+                  <h4>Europe</h4>
+                </a>
+                <a href="#">
+                  <img src="./assets/img/tn-img-02.jpg" alt="place-image">
+                  <h4>Asie</h4>
+                </a>
+                <a href="#">
+                  <img src="./assets/img/tn-img-03.jpg" alt="place-image">
+                  <h4>Afrique</h4>
+                </a>
+                <a href="#">
+                  <img src="./assets/img/tn-img-04.jpg" alt="place-image">
+                  <h4>Amérique</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vidéo--> 
+    <section id="video" class="video">
+      <div class="video-overlay">
+        <i class="fa fa-play-circle video-control-play"></i>
+        <i class="fa fa-pause-circle video-control-pause"></i>
+      </div>
+      <div class="video-container">
+        <video class="level-video">
+          <source src="./assets/videos/video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+
+  <!-- Contact--> 
+    <section>
+      <div id="contact" class="container">
+        <div class="row">
+          <div class="col-lg-6"> 
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5778.284365379408!2d3.8909330697754023!3d43.603581100000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a56033af03e9%3A0x1ee62756dbea49bd!2sFacult%C3%A9%20d&#39;%C3%89conomie%20-%20Universit%C3%A9%20de%20Montpellier!5e0!3m2!1sfr!2sfr!4v1705848590607!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <form action="" contact-form>
+              <div class="form-group">
+                <input type="text" name="" id="" class="form-control" placeholder=" Nom" required>
+                <i class="fa fa-user"></i>
+              </div>
+              <div class="form-group">
+                <input type="email" name="" id="" class="form-control" placeholder=" Email" required>
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div class="form-group">
+                <input type="text" name="" id="" class="form-control" placeholder="Objet" required>
+                <i class="fa fa-book"></i>
+              </div>
+              <div class="form-group">
+                <textarea type="text" name="" id="" class="form-control" placeholder="Message" required rows="9"></textarea>
+                <i class="fa fa-commenting"></i>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="showAlert()">Envoyer Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- Footer--> 
+  <footer class="footer">
+    <div class="countainer">
+      <p> Copyright &copy; 2024 - Travel -  Tous droits réservés. </p>
+    </div>
+  </footer>
+<!-- Librairies de JavaScript et jQuery -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script> <!-- Librairies de JavaScript pour Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> <!-- Bibliothèque jQuery -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> <!-- Bibliothèque jQuery UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> <!-- Carrousel Slick (bibliothèque de carrousel) -->
+    <script src="./assets/js/script.js"></script> <!-- mon script personnalisé /  il faut toujours la mettre en dernier -->
+</body>
+</html>
